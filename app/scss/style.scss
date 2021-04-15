@@ -1,0 +1,110 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header {
+    margin-bottom: 78px;
+}
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 122px;
+    @include bold;
+}
+
+.menu__item {
+    display: inline-block;
+    &+.menu__item {
+        padding-left: 50px;
+    }
+}
+.header__box {
+    display: flex;
+}
+
+.header__adress {
+    margin-right: 60px;
+    width: 265px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('..//images/icons/adress.svg');
+        left: 0;
+        top: -10px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.user-list {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    &__item {
+        padding-right: 10px;
+    }
+    &__link.basket {
+        position: relative;
+        .basket__num {
+            @include medium;
+            position: absolute; 
+            height: 20px;
+            width: 20px;
+            font-size: 10px;
+            line-height: 20px;
+            border-radius: 50%;
+            background-color: $blue;
+            bottom: -14px;
+            right: -14px;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+
+.menu-categories{
+        display: flex;
+        background-color: $grey;
+        justify-content: space-around;
+        min-height: 53px;
+        &__item {
+            position: relative;
+        }
+        &__link {
+            @include regular;
+            transition: all .5s;
+            padding: 15px 0 14px;
+            position: absolute;
+            font-size: 17px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &::before {
+                content: '';
+                width: 0;
+                left: auto;
+                right: 0;
+                position: absolute;
+                background: $blue;
+                height: 3px;
+                bottom: -2px;
+                transition: all .3s;
+            }
+            &:hover {
+                @include semibold;
+                font-weight: 400;
+                color: #000;
+                &::before{
+                    width: 100%;
+                    right: auto;
+                    left: 0;
+                    
+                }
+            }
+            
+        }
+        
+}
