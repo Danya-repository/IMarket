@@ -2,8 +2,8 @@
 @import 'global';
 @import 'fonts';
 
-.header {
-    margin-bottom: 78px;
+.header, section {
+    margin-bottom: 80px;
 }
 .header__top-inner {
     display: flex;
@@ -171,6 +171,7 @@
 
 .sale-item {
     max-width: 265px;
+    max-height: 400px;
     text-align: center;
     border: 1px solid #CDCDCD;
     border-radius: 3px;
@@ -262,4 +263,52 @@
 
 .price {
     position: relative;
+}
+
+.search {
+    &__tabs {
+        margin-bottom: 25px;
+    }
+    &__tabs-item {
+        padding: 11px 26px 12px;
+        &--active {
+            border-radius: 5px;
+            background-color: $grey;
+            font-weight: 700;
+        }
+    }
+    &__content-form {
+        display: flex;
+    }
+    &__content-item {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+    &__content-input {
+        background-color: $grey;
+        background-repeat: 3px;
+        padding: 5px 20px;
+        border: none;
+        font-size: 16px;
+        line-height: 19px;
+        width: 100%;
+        &::placeholder {
+            color: #656464;
+        }
+    }
+    &__content-btn {
+        line-height: 17px;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #fff;
+        @include SFbold;
+        background-color: $blue;
+        padding: 17px 40px;
+        border-radius: 3px;
+        border: none;
+        margin-left: -3px;
+    }
 }
