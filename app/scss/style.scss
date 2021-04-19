@@ -163,7 +163,7 @@
         &+li {
             margin-left: 5px;
         }
-        &.slick-active li button {
+        &.slick-active button {
             background-color: #fff;
         }
     }
@@ -484,6 +484,10 @@
     }
 }
 
+.products {
+    margin-bottom: 80px;
+}
+
 .product-item__wrapper.product-item__not-available .product-item__price {
     display: none;
 }
@@ -596,7 +600,7 @@
 }
 
 .product__more {
-    margin: 35px 80px;
+    margin: 35px;
     text-align: center;
 }
 
@@ -608,5 +612,91 @@
     .slick-list {
       margin-left: -25px;
       margin-right: -25px;
+    }
+}
+
+.banner {
+    margin-bottom: 80px;
+}
+
+.footer {
+    background-color: $grey;
+    &__bottom{
+        padding: 46px 0 22px;
+        display: flex;
+        justify-content: center;
+    }
+    &__bottom-link {
+        font-size: 10px;
+        line-height: 12px;
+        color: #48494D;
+        margin: 0 40px;
+    }
+    &__top {
+        padding-top: 43px;
+    }
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__top-title {
+        @include SFbold;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__top-item {
+        width: 200px;
+    }
+    &__top-newslatter.footer__top-item{
+        width: 295px;
+        margin-right: 53px;
+    }
+    &-list {
+        margin-top: 7px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+.footer-form {
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-form__input {
+    background-color: #fff;
+    border: none;
+    font-size: 14px;;
+    line-height: 17px;
+    padding: 0 12px;
+    &::placeholder {
+        color: #C4C4C4;
+    }
+}
+
+.footer-form__btn {
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: none;
+    background-color: $blue;
+    color: #fff;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.12em;
+    @include SFsemibold;
+}
+
+.footer__top-social.footer__top-item {
+    width: 250px;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &__item + .social-list__item {
+        margin-left: 30px;
     }
 }
