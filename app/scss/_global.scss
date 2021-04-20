@@ -11,7 +11,8 @@ html {
 a, a:visited {
     display: inline-block;
     text-decoration: none;
-    color: $maincolor;
+    color: inherit;
+    // columns: ;
 }
 
 p {
