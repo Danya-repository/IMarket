@@ -786,13 +786,13 @@
     margin-left: 10px;
 }
 
-button.catalog__filter-btngrid{ 
+// button.catalog__filter-btngrid{ 
     
-}
+// }
 
-.catalog__filter-btnline {
+// .catalog__filter-btnline {
 
-}
+// }
 
 .catalog__inner {
     display: flex;
@@ -840,4 +840,73 @@ button.catalog__filter-btngrid{
 
 .pagination-list__item a{
     display: block;
+}
+
+.aside-filter__tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aside-filter__tab {
+    @include SFregular;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #C4C4C4;
+    width: 50%;
+    &.tab--active {
+        color: $maincolor;
+        span {
+            @include SFbold;
+            display: inline-block;
+            border-bottom: 2px solid $blue;
+            padding-bottom: 7px;
+        }
+    }
+}
+
+.aside-filter__item-drop {
+    margin: 40px 0;
+}
+
+.aside-filter__item-title {
+    @include SFsemibold;
+    line-height: 19px;
+    font-size: 16px;
+    padding-left: 26px;
+}
+
+.filter__item-drop {
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/arrow-down.svg');
+        left: 0;
+        bottom: 5px;
+        width: 12px;
+        height: 8px;
+   }
+   &--active {
+       &::before {
+          transform: rotate(180deg); 
+       }
+   }
+}
+
+.aside-filter__content {
+    display: flex;
+}
+.aside-filter__content-box {
+    width: 50%;
+}
+
+.aside-filter__content-label {
+    @include SFregular;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
 }
