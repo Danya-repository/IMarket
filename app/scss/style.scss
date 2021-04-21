@@ -878,7 +878,7 @@
 }
 
 .filter__item-drop {
-    margin-bottom: 20px;
+
     position: relative;
     cursor: pointer;
     &::before {
@@ -898,7 +898,9 @@
 }
 
 .aside-filter__content {
+    margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 .aside-filter__content-box {
     width: 50%;
@@ -909,4 +911,115 @@
     font-size: 14px;
     line-height: 17px;
     cursor: pointer;
+}
+
+.jq-checkbox, .jq-radio{
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #C4C4C4;
+    border-radius: 1px;
+    box-shadow: none;
+    vertical-align: -1px;
+    margin: 0 8px 0 0;
+    &.checked{
+        background: $blue;
+        border: none;
+    }
+}
+
+
+.jq-checkbox.checked .jq-checkbox__div {
+    width: 8px;
+    height: 6px;
+    margin: 4px 0 0 3px;
+    border: none;
+    transform: rotate(0);  
+    background-image: url('../images/icons/checked.svg');
+}
+
+.jq-radio.checked .jq-radio__div {
+    width: 0;
+    height: 0;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.aside-filter__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside-filter__content.aside-filter__content-radio {
+     flex-wrap: nowrap;
+}
+
+.irs--flat {
+    width: 100%;
+    margin-top: -15px;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+    display: none;
+}
+
+.irs--flat .irs-max, .irs--flat .irs-min {
+    top: 60px;
+    padding: 0;
+    color: #2F3035;
+    font-size: 14px;
+    line-height: 17px;
+    text-shadow: none;
+    background-color: #e1e4e9;
+    border-radius: 0;
+    background-color: transparent;
+    @include BAregular;
+    visibility: visible !important;
+    border-radius: 0;
+    text-decoration-line: underline;
+    padding-left: 27px;
+}
+
+.irs-min::before, 
+.irs-max::before {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    color: #C4C4C4;
+}
+
+.irs-min::before {
+    content: 'от';
+}
+
+.irs-max::before {
+    content: 'до';
+}
+
+.irs--flat .irs-line {
+    top: 25px;
+    height: 1px;
+    background-color: #E0E0E0;
+    border-radius: 0px;
+}
+
+.irs--flat .irs-bar {
+    top: 25px;
+    height: 3px;
+    background-color: $blue;
+}
+
+.irs--flat .irs-handle {
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    background-color: $blue;
+    border-radius: 50%;
+}
+.irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle>i:first-child, .irs--flat .irs-handle:hover>i:first-child {
+    background-color: transparent;
 }

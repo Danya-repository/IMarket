@@ -35,4 +35,10 @@ $(function(){
         $(this).next().slideToggle('250')
     });
 
+    $(".js-range-slider").ionRangeSlider({
+        grid: false,
+        type: "double",
+    });
+
+
 });
